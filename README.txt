@@ -1,3 +1,9 @@
+This is a branch of the SIM card library of Michau Benoit.
+
+Fixed the PLMN display and added some specific calling scripts to display data and program the PLMNsel file.
+
+Note: The PIN1 is disable and thus no VERIFY is required prior to updating the file.
+
 ########################
 # smartcard repository #
 ########################
