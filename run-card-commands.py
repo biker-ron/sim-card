@@ -60,6 +60,7 @@ if __name__ == '__main__':
     spdi2 = u.get_spdi_readBinary()
     iccid = u.get_ICCID()
     plmnsel = u.get_plmnsel()
+    fplmn = u.get_fplmn()
 
     print " "
     print "------------------------------------"
@@ -71,3 +72,4 @@ if __name__ == '__main__':
     print "SPDI Read Binary response: ", spdi2
     print "ICCID: " + iccid
     print "PLMNSel" , plmnsel
+    print "FPLMNs" , fplmn

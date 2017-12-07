@@ -314,6 +314,31 @@ class USIM(UICC):
         return None
 
 
+    def get_fplmn(self):
+        '''
+        get_fplmn() -> string(PLMN)
+        reads FPLMN value at address [0x6F, 0x7B]
+        returns FPLMNS string on success or None on error
+        '''
+        # select FPLMN file
+        # print ("=====================================================")
+        # print ("=    Get FPLMN Value Using Select and GetResponse    =")
+        # print ("=====================================================")
+        fplmns = self.select([0x3F, 0x00, 0x7F, 0x20, 0x6F, 0x7B], type="pmf")
+        if fplmns is None:
+            log(3, '(get_plmnsel) %s' % self.coms())
+            return None
+        # and parse the received data into the fplmns structure
+        if 'Data' in fplmns.keys():
+            # print ("==== GetResponse FPLMN Values Returned: ", fplmns)
+            return (fplmns['Data'])
+
+        # if issue with the content of the FPLMN file
+        if self.dbg >= 2:
+            log(3, '(get_fplmn) %s' % self.coms())
+        return None
+
+
 
     def get_CS_keys(self):
         '''

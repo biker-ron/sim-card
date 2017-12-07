@@ -1,24 +1,8 @@
-*.sublime-workspace
-*.ipr
-*.iml
 /.idea
 /.settings
 *.DS_Store
-/crud
-/eclipse
-/secure
-/tmp
-/.classpath
-/.project
-/test-result
-/cobertura.ser
 *.orig
-/dist
-/precompiled
-/logs
-/framework
-/maps
-/modules
+**/*.pyc
 __MACOSX
 
 
